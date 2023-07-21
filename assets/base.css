@@ -3323,3 +3323,8 @@ details-disclosure > details {
     --sparkle: url('./sparkle.gif');
   }
 }
+
+
+h2.title.inline-richtext.h2.scroll-trigger.animate--slide-in {
+    color: pink;
+}
