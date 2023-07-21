@@ -2076,3 +2076,20 @@
   ]
 }
 {% endschema %}
+
+
+<script>
+  if(location.pathname == "/products/handbag"){
+      document.getElementById('Option-template--20003348709667__main-1').onchange = function(e){
+          setTimeout(function () {
+              if(e.target.value == "Unselected") {
+                document.getElementById('ProductSubmitButton-template--20003348709667__main').disabled = 'disabled';
+              } else {
+                document.getElementById('ProductSubmitButton-template--20003348709667__main').disabled = false;  
+              }        
+          },1000)
+      }
+      document.getElementById('Option-template--20003348709667__main-1').value = "Unselected"
+      document.getElementById('ProductSubmitButton-template--20003348709667__main').disabled = 'disabled';
+  }
+</script>
