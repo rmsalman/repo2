@@ -159,14 +159,15 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                <li
+                  {% unless product.id == 8454354731299 %}
+
+              <li
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  {% unless product.id == 8454354731299 %}
                 
                   {% render 'card-product',
                     card_product: product,
@@ -180,9 +181,9 @@
                     section_id: section.id
                   %}
 
-                    {% endunless %}
                     
                 </li>
+                    {% endunless %}
               {%- endfor -%}
             </ul>
 
