@@ -21,7 +21,7 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-{{ card_product | inspect }} 
+{{ card_product | log  }} 
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
